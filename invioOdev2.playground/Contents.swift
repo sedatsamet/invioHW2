@@ -41,16 +41,16 @@ class Odev2 {
     // Çalışma saat ücret : 10 ₺
     // Mesai saat ücret : 20 ₺
     // 160 Saat üzeri mesai
-    func soru6(gunSayisi:Int) -> Int {
+    func soru6(gunSayisi:Double) -> Double {
         var calismaSaati = gunSayisi * 8
-        var maas : Int?
+        var maas : Double?
         if calismaSaati > 160 {
             var mesaiSaati = calismaSaati - 160
             calismaSaati -= mesaiSaati
             var mesaiUcreti = mesaiSaati * 20
-            maas = calismaSaati * 10 + mesaiUcreti
+            maas = Double(calismaSaati) * 10 + Double(mesaiUcreti)
         } else {
-            maas = calismaSaati * 10
+            maas = Double(calismaSaati) * 10
         }
         return maas!
     }
@@ -93,13 +93,13 @@ o.soru4(kelime: "Araba", harf: "a")
 print("--------------")
 
 // Soru-5
-var icAciToplami = o.soru5(kenarSayisi: 5)
+var icAciToplami = o.soru5(kenarSayisi: 4)
 print(icAciToplami)
 
 print("--------------")
 
 // Soru-6
-var maasHesapla = o.soru6(gunSayisi: 21)
+var maasHesapla = o.soru6(gunSayisi: 21.5)
 print(maasHesapla)
 
 print("--------------")
